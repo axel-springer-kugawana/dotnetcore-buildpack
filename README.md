@@ -17,7 +17,7 @@ If repository contains **multiple** Web Applications (multiple `Startup.cs`), `P
 heroku buildpacks:set https://github.com/axel-springer-kugawana/sl_herokuBuildPack
 ```
 
-[Reference](https://github.com/jincod/dotnetcore-buildpack)
+[Here](https://github.com/jincod/dotnetcore-buildpack) original Builpack source
 
 More info
 
