@@ -37,10 +37,11 @@ function install_dotnet() {
     curl -sSL ${DOTNET_RUNTIME_DOWNLOAD_URL} | tar xz -C ${DOTNET_CACHE_LOCATION}/runtime
   fi
 
-  export PATH="${DOTNET_CACHE_LOCATION}/sdk:$PATH"
   mkdir -p ${BUILD_DIR}/.heroku/dotnet
   cp -r ${DOTNET_CACHE_LOCATION}/runtime ${BUILD_DIR}/.heroku/dotnet
   cp -r ${DOTNET_CACHE_LOCATION}/sdk ${BUILD_DIR}/.heroku/dotnet
+  
+  export PATH="${BUILD_DIR}/.heroku/dotnet/sdk:$PATH"
 }
 
 export_env_dir() {
