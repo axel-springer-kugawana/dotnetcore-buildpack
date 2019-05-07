@@ -65,13 +65,12 @@ mv ${NUGET_PATH}/nuget.heroku ${NUGET_PATH}/nuget.config
 echo "publish ${PROJECT_FILE} for ${BUILD_CONFIGURATION}"
 dotnet publish $PROJECT_FILE --output ${BUILD_DIR}/heroku_output --configuration ${BUILD_CONFIGURATION} --runtime linux-x64
 
-
-if [ -f ${BUILD_DIR}/Procfile ] && grep -q '^web:' ${BUILD_DIR}/Procfile ; then
+if [ -f ${BUILD_DIR}/Procfile ]; then
 	topic "WARNING"
 	echo "Be careful with custom Procfile" | indent
 else
 	echo "Add web process to Procfile" | indent
 	cat << EOT >> ${BUILD_DIR}/Procfile
-web: cd \$HOME/heroku_output && ./${PROJECT_NAME}
+  web: cd \$HOME/heroku_output && ./${PROJECT_NAME}
 EOT
 fi
