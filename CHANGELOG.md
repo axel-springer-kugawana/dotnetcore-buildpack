@@ -1,5 +1,9 @@
 # .NET Core Buildpack Changelog
 
+## 2023-03-08
+
+- Added heroku-22 stack support
+
 ## 2019-03-13
 
 - Updated .NET Core 2.2.105
