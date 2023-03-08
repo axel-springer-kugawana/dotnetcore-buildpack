@@ -3,6 +3,7 @@
 ## 2023-03-08
 
 - Added heroku-22 stack support
+- Added heroku-20 stack support
 
 ## 2019-03-13
 
