@@ -34,10 +34,9 @@ DOTNET_RUNTIME_VERSION=${DOTNET_RUNTIME_VERSION:-2.2.3}
 BUILD_CONFIGURATION=${BUILD_CONFIGURATION:-Release}
 
 echo "Installing openssl"
-cd /usr/local/src/
 wget https://www.openssl.org/source/openssl-1.0.1s.tar.gz
 tar xzvf openssl-1.0.1s.tar.gz
-cd /usr/local/src/openssl-1.0.1s
+cd openssl-1.0.1s
 ./config --prefix=/usr/local/ssl --openssldir=/usr/local/ssl shared zlib
 make
 make install
