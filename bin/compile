@@ -38,7 +38,7 @@ wget https://www.openssl.org/source/openssl-1.0.1s.tar.gz
 tar xzvf openssl-1.0.1s.tar.gz
 cd openssl-1.0.1s
 echo "Step1"
-./config
+./config --prefix=ssl --openssldir=ssl shared zlib
 echo "Step2"
 make
 echo "Step3"
