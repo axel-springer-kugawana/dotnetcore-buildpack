@@ -37,9 +37,13 @@ echo "Installing openssl"
 wget https://www.openssl.org/source/openssl-1.0.1s.tar.gz
 tar xzvf openssl-1.0.1s.tar.gz
 cd openssl-1.0.1s
+echo "Step1"
 ./config
+echo "Step2"
 make
+echo "Step3"
 make install
+echo "Step4"
 
 echo "Installing dotnet"
 install_dotnet $BUILD_DIR $CACHE_DIR $DOTNET_SDK_VERSION $DOTNET_RUNTIME_VERSION
