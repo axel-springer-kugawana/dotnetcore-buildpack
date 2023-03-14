@@ -33,7 +33,7 @@ DOTNET_SDK_VERSION=${DOTNET_SDK_VERSION:-2.2.105}
 DOTNET_RUNTIME_VERSION=${DOTNET_RUNTIME_VERSION:-2.2.3}
 BUILD_CONFIGURATION=${BUILD_CONFIGURATION:-Release}
 
-npm install --global yarn
+echo uname -a
 
 echo "Installing openssl"
 wget https://www.openssl.org/source/openssl-1.0.1s.tar.gz
