@@ -33,10 +33,7 @@ DOTNET_SDK_VERSION=${DOTNET_SDK_VERSION:-2.2.105}
 DOTNET_RUNTIME_VERSION=${DOTNET_RUNTIME_VERSION:-2.2.3}
 BUILD_CONFIGURATION=${BUILD_CONFIGURATION:-Release}
 
-curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/yarn.gpg
-echo "deb [signed-by=/etc/apt/trusted.gpg.d/yarn.gpg] https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
-make
-make install
+npm install --global yarn
 
 echo "Installing openssl"
 wget https://www.openssl.org/source/openssl-1.0.1s.tar.gz
