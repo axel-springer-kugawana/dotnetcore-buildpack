@@ -37,7 +37,7 @@ echo "Installing openssl"
 wget https://www.openssl.org/source/openssl-1.0.1s.tar.gz
 tar xzvf openssl-1.0.1s.tar.gz
 cd openssl-1.0.1s
-./config --prefix=/usr/local/ssl --openssldir=/usr/local/ssl shared zlib
+./config
 make
 make install
 
