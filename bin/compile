@@ -33,20 +33,6 @@ DOTNET_SDK_VERSION=${DOTNET_SDK_VERSION:-2.2.105}
 DOTNET_RUNTIME_VERSION=${DOTNET_RUNTIME_VERSION:-2.2.3}
 BUILD_CONFIGURATION=${BUILD_CONFIGURATION:-Release}
 
-apt update && apt upgrade
-apt-get install sudo
-
-echo "Installing openssl"
-wget https://www.openssl.org/source/openssl-1.0.1s.tar.gz
-tar xzvf openssl-1.0.1s.tar.gz
-cd openssl-1.0.1s
-echo "Step1"
-./config
-echo "Step2"
-make
-echo "Step3"
-sudo make install
-
 echo "Installing dotnet"
 install_dotnet $BUILD_DIR $CACHE_DIR $DOTNET_SDK_VERSION $DOTNET_RUNTIME_VERSION
 
